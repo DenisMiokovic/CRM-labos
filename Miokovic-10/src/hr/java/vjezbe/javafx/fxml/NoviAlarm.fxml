@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="301.0" prefWidth="444.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.java.vjezbe.javafx.controller.NoviAlarmController">
+   <top>
+      <Label text="Unesite podatke za novi alarm:" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </top>
+   <bottom>
+      <Button fx:id="spremiButton" mnemonicParsing="false" onAction="#spremiAlarm" text="Spremi" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="7.0" />
+         </BorderPane.margin>
+      </Button>
+   </bottom>
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="170.0" minHeight="10.0" prefHeight="131.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="279.0" minHeight="10.0" prefHeight="113.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="17.0" prefWidth="223.0" text="   Klijent:" textAlignment="RIGHT">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <padding>
+                  <Insets left="170.0" />
+               </padding>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="221.0" text="Opis alarma:" textAlignment="RIGHT" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <padding>
+                  <Insets left="150.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="opisTextField" prefHeight="0.0" prefWidth="222.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ComboBox fx:id="klijentComboBox" prefHeight="25.0" prefWidth="221.0" promptText="Odaberite klijenta" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>

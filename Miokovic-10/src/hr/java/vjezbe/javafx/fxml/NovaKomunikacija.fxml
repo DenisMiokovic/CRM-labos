@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="407.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.java.vjezbe.javafx.controller.NovaKomunikacijaController">
+   <top>
+      <Label text="Unesite podatke za novu komunikaciju:" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </top>
+   <bottom>
+      <Button fx:id="spremiButton" mnemonicParsing="false" onAction="#spremiKomunikaciju" text="Spremi" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="7.0" />
+         </BorderPane.margin>
+      </Button>
+   </bottom>
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="258.0" minWidth="10.0" prefWidth="222.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="226.0" minWidth="10.0" prefWidth="222.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Klijent:" textAlignment="RIGHT">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <padding>
+                  <Insets left="180.0" />
+               </padding>
+            </Label>
+            <Label text="Zaposlenik:" textAlignment="RIGHT" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <padding>
+                  <Insets left="155.0" />
+               </padding>
+            </Label>
+            <Label text="Vrsta komunikacije:" textAlignment="RIGHT" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <padding>
+                  <Insets left="110.0" />
+               </padding>
+            </Label>
+            <Label text="Sadržaj komunikacije:" textAlignment="RIGHT" GridPane.columnSpan="2" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <padding>
+                  <Insets left="170.0" top="50.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="sadrzajTextField" prefHeight="61.0" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+            <ComboBox fx:id="vrstaKomunikacijeComboBox" prefHeight="25.0" prefWidth="203.0" promptText="Odaberite vrstu komunikacije" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="klijentTextField" GridPane.columnIndex="1" />
+            <TextField fx:id="zaposlenikTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.java.vjezbe.javafx.controller.UslugeEkranController">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="26.0" prefWidth="601.0" text="Pregled usluga">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+               <padding>
+                  <Insets left="240.0" />
+               </padding>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Label>
+            <FlowPane alignment="CENTER" prefHeight="150.0" prefWidth="600.0">
+               <children>
+                  <Label text="Prezime klijenta:">
+                     <FlowPane.margin>
+                        <Insets right="20.0" />
+                     </FlowPane.margin>
+                  </Label>
+                  <TextField fx:id="klijentiFilterTextField">
+                     <FlowPane.margin>
+                        <Insets right="20.0" />
+                     </FlowPane.margin>
+                  </TextField>
+                  <Button mnemonicParsing="false" onAction="#prikaziUsluge" text="Pretraži" />
+               </children></FlowPane>
+            <TableView fx:id="uslugeTableView" prefHeight="360.0" prefWidth="600.0">
+              <columns>
+                <TableColumn fx:id="opisColumn" prefWidth="120.0" text="Opis usluge" />
+                <TableColumn fx:id="klijentColumn" prefWidth="83.0" text="Klijent" />
+                  <TableColumn fx:id="vrstaColumn" minWidth="0.0" prefWidth="106.0" text="Vrsta usluge" />
+                  <TableColumn fx:id="datumColumn" prefWidth="84.0" text="Datum" />
+                  <TableColumn fx:id="cijenaColumn" prefWidth="88.0" text="Cijena" />
+                  <TableColumn fx:id="obavljenaColumn" prefWidth="62.0" text="Obavljena" />
+                  <TableColumn fx:id="placenaColumn" prefWidth="58.0" text="Plaćena" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
